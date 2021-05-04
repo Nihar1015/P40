@@ -40,6 +40,9 @@ class Game{
                 form.hide();
 
                 Player.getPlayerInfo();
+                if(allPlayers){
+
+                
                  image(back_img, 0, 0, 1000, 800);
                  var x =100;
                  var y=200;
@@ -65,7 +68,8 @@ class Game{
                 }
 
                 fill("white");
-                text("Player 1:" + allPlayers.score, 200, 100);
+                text("Player 1:" + allPlayers.player1.score, 200, 100);
+                text("Player 2:" + allPlayers.player2.score, 200, 200);
                 console.log(allPlayers);
                 
                  
@@ -105,6 +109,9 @@ class Game{
                         player.score = player.score + 1;
                         player.update();
                     }
+
+                }
+                    
 }
          
          
